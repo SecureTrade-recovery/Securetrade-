@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SecureTrade Recovery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0c0f1a;color:#fff;scroll-behavior:smooth;}
+a{text-decoration:none;color:#fff}
+
+/* HEADER */
+header{
+  background:#10142b;
+  padding:20px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+header h1{color:#00e0ff}
+nav a{margin-left:25px}
+nav a:hover{color:#00ff99}
+
+/* HERO SECTION - PROFESSIONAL */
+.hero{
+    height:90vh;
+    display:flex;
+    align-items:center;
+    padding-left:80px;
+
+    background-image:
+        linear-gradient(to right, rgba(0,0,0,0.72) 45%, rgba(0,0,0,0.2)),
+        url('fraud-img.jpg'); /* image name SAME */
+
+    background-size:cover;
+    background-position:85% center;  /* image right shift */
+    background-repeat:no-repeat;
+}
+
+/* Hero Content */
+.hero-content{
+    max-width:600px;
+}
+
+.hero-content h1{
+    font-size:56px;
+    margin-bottom:20px;
+
+    
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:30px;
+    line-height:1.6;
+}
+
+.hero-content button{
+    padding:15px 35px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    background:#00e0ff;
+    color:black;
+    cursor:pointer;
+    font-weight:bold;
+}
+/* LEFT SIDE GRADIENT OVERLAY */
+.hero::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:60%;
+  height:100%;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.9),
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.0)
+  );
+  z-index:1;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:600px;
+}
+
+.hero h2{
+  font-size:46px;
+  margin-bottom:20px;
+  font-weight:700;
+}
+
+.hero p{
+  color:#e0e0e0;
+  margin-bottom:30px;
+  font-size:18px;
+}
+
+.btn{
+  background:#00e0ff;
+  color:#000;
+  padding:12px 24px;
+  border-radius:30px;
+  font-weight:600;
+  display:inline-block;
+  transition:0.3s;
+}
+.btn:hover{background:#00ff99}
+
+/* SECTIONS */
+.section{padding:80px 60px}
+.section h3{text-align:center;font-size:32px;margin-bottom:30px;color:#00e0ff}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+.card{
+  background:#141a3a;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  transition:0.3s
+}
+.card:hover{transform:translateY(-5px);box-shadow:0 0 15px #00e0ff}
+.card img{margin-bottom:15px}
+
+.fee-box{
+  background:#1b2248;
+  border:2px solid #00e0ff;
+  border-radius:15px;
+  padding:30px;
+  max-width:600px;
+  margin:0 auto;
+  text-align:center
+}
+
+.form-box{
+  background:#141a3a;
+  padding:30px;
+  border-radius:15px;
+  max-width:700px;
+  margin:0 auto
+}
+.form-box input,.form-box select,.form-box textarea{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border-radius:8px;
+  border:none
+}
+.form-box button{
+  background:#00e0ff;
+  color:#000;
+  padding:14px 30px;
+  border:none;
+  border-radius:30px;
+  font-weight:600;
+  margin-top:10px;
+  transition:0.3s
+}
+.form-box button:hover{background:#00ff99}
+
+footer{
+  background:#10142b;
+  padding:40px;
+  text-align:center;
+  color:#aaa
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  header{padding:15px 25px}
+  .section{padding:60px 25px}
+  .hero{padding:80px 25px}
+  .hero h2{font-size:32px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>SecureTrade Recovery</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#process">Recovery Process</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h2>Recover Your Stock Market Losses with Experts</h2>
+    <p>Fraud, fake tips, advisory scams ya trading loss? We help you take legal & professional action.</p>
+    <a class="btn" href="#contact">Submit Your Case</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+<h3>Our Services</h3>
+<div class="grid">
+<div class="card">
+  <img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png" width="60"><br>
+  Fraud Investigation
+</div>
+<div class="card">
+  <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" width="60"><br>
+  Documentation Support
+</div>
+<div class="card">
+  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="60"><br>
+  Legal Coordination
+</div>
+<div class="card">
+  <img src="https://cdn-icons-png.flaticon.com/512/2331/2331945.png" width="60"><br>
+  Fund Recovery Process
+</div>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process">
+<h3>Our Recovery Process</h3>
+<div class="grid">
+<div class="card">1. Submit Your Case</div>
+<div class="card">2. Case Evaluation</div>
+<div class="card">3. Pay 5% Advance</div>
+<div class="card">4. Recovery Action</div>
+<div class="card">5. Fund Recovered</div>
+<div class="card">6. Balance Fee Paid</div>
+</div>
+</section>
+
+<!-- FEE -->
+<section class="section">
+<h3>Our Fee Model</h3>
+<div class="fee-box">
+<p>Minimum Plan: ₹10,000</p>
+<p>Maximum Plan: ₹1 Crore</p>
+<p>Our Fee: 10%</p>
+<p>Advance: 5%</p>
+<p style="color:#00ff99;font-weight:600">No Recovery – No Full Fee</p>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+<h3>Submit Your Case</h3>
+<div class="form-box">
+<input type="text" placeholder="Your Name">
+<input type="text" placeholder="Mobile Number">
+<input type="email" placeholder="Email">
+<input type="text" placeholder="City">
+<input type="text" placeholder="Loss Amount">
+<select>
+<option>Type of Fraud</option>
+<option>Fake Advisory</option>
+<option>Telegram Scam</option>
+<option>Account Manipulation</option>
+</select>
+<textarea rows="4" placeholder="Your Message"></textarea>
+<button>Submit Case</button>
+</div>
+</section>
+
+<footer>
+<p>📞+91 96696 57448| 📧 support@securetraderecovery.com</p>
+<p>Learning center d. H. Road bhela kolkata west Bengal</p>
+<p>©️ SecureTrade Recovery</p>
+</footer>
+
+</body>
+</html>
