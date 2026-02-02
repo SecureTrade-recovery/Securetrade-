@@ -24,51 +24,21 @@ header h1{color:#00e0ff}
 nav a{margin-left:25px}
 nav a:hover{color:#00ff99}
 
-/* HERO SECTION - PROFESSIONAL */
+/* HERO */
 .hero{
     height:90vh;
     display:flex;
     align-items:center;
     padding-left:80px;
-
+    position:relative;
     background-image:
         linear-gradient(to right, rgba(0,0,0,0.72) 45%, rgba(0,0,0,0.2)),
-        url('fraud-img.jpg'); /* image name SAME */
-
+        url('fraud-img.jpg');
     background-size:cover;
-    background-position:85% center;  /* image right shift */
+    background-position:85% center;
     background-repeat:no-repeat;
 }
 
-/* Hero Content */
-.hero-content{
-    max-width:600px;
-}
-
-.hero-content h1{
-    font-size:56px;
-    margin-bottom:20px;
-
-    
-}
-
-.hero-content p{
-    font-size:20px;
-    margin-bottom:30px;
-    line-height:1.6;
-}
-
-.hero-content button{
-    padding:15px 35px;
-    font-size:18px;
-    border:none;
-    border-radius:30px;
-    background:#00e0ff;
-    color:black;
-    cursor:pointer;
-    font-weight:bold;
-}
-/* LEFT SIDE GRADIENT OVERLAY */
 .hero::before{
   content:"";
   position:absolute;
@@ -76,12 +46,7 @@ nav a:hover{color:#00ff99}
   left:0;
   width:60%;
   height:100%;
-  background: linear-gradient(
-    to right,
-    rgba(0,0,0,0.9),
-    rgba(0,0,0,0.65),
-    rgba(0,0,0,0.0)
-  );
+  background:linear-gradient(to right,rgba(0,0,0,0.9),rgba(0,0,0,0.65),rgba(0,0,0,0));
   z-index:1;
 }
 
@@ -91,17 +56,8 @@ nav a:hover{color:#00ff99}
   max-width:600px;
 }
 
-.hero h2{
-  font-size:46px;
-  margin-bottom:20px;
-  font-weight:700;
-}
-
-.hero p{
-  color:#e0e0e0;
-  margin-bottom:30px;
-  font-size:18px;
-}
+.hero h2{font-size:46px;margin-bottom:20px}
+.hero p{font-size:18px;margin-bottom:30px;color:#e0e0e0}
 
 .btn{
   background:#00e0ff;
@@ -109,7 +65,6 @@ nav a:hover{color:#00ff99}
   padding:12px 24px;
   border-radius:30px;
   font-weight:600;
-  display:inline-block;
   transition:0.3s;
 }
 .btn:hover{background:#00ff99}
@@ -118,6 +73,7 @@ nav a:hover{color:#00ff99}
 .section{padding:80px 60px}
 .section h3{text-align:center;font-size:32px;margin-bottom:30px;color:#00e0ff}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+
 .card{
   background:#141a3a;
   padding:25px;
@@ -126,8 +82,8 @@ nav a:hover{color:#00ff99}
   transition:0.3s
 }
 .card:hover{transform:translateY(-5px);box-shadow:0 0 15px #00e0ff}
-.card img{margin-bottom:15px}
 
+/* FEE MODEL */
 .fee-box{
   background:#1b2248;
   border:2px solid #00e0ff;
@@ -138,6 +94,32 @@ nav a:hover{color:#00ff99}
   text-align:center
 }
 
+/* PAYMENT BUTTON + QR */
+.pay-btn{
+  background:#00ff99;
+  color:#000;
+  padding:14px 35px;
+  border:none;
+  border-radius:30px;
+  font-size:18px;
+  font-weight:600;
+  cursor:pointer;
+  margin-top:25px;
+  transition:0.3s;
+}
+.pay-btn:hover{background:#00e0ff}
+
+#qrBox{
+  display:none;
+  margin-top:20px;
+}
+#qrBox img{
+  width:200px;
+  border-radius:12px;
+  border:2px solid #00e0ff;
+}
+
+/* FORM */
 .form-box{
   background:#141a3a;
   padding:30px;
@@ -160,7 +142,6 @@ nav a:hover{color:#00ff99}
   border-radius:30px;
   font-weight:600;
   margin-top:10px;
-  transition:0.3s
 }
 .form-box button:hover{background:#00ff99}
 
@@ -171,7 +152,6 @@ footer{
   color:#aaa
 }
 
-/* RESPONSIVE */
 @media(max-width:768px){
   header{padding:15px 25px}
   .section{padding:60px 25px}
@@ -193,7 +173,6 @@ footer{
 </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-content">
     <h2>Recover Your Stock Market Losses with Experts</h2>
@@ -202,8 +181,7 @@ footer{
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="section" id="services">
+section class="section" id="services">
 <h3>Our Services</h3>
 <div class="grid">
 <div class="card">
@@ -225,20 +203,17 @@ footer{
 </div>
 </section>
 
-<!-- PROCESS -->
 <section class="section" id="process">
 <h3>Our Recovery Process</h3>
 <div class="grid">
-<div class="card">1. Submit Your Case</div>
-<div class="card">2. Case Evaluation</div>
-<div class="card">3. Pay 5% Advance</div>
-<div class="card">4. Recovery Action</div>
+<div class="card">1. Submit Case</div>
+<div class="card">2. Evaluation</div>
+<div class="card">3. Pay 5%</div>
+<div class="card">4. Recovery</div>
 <div class="card">5. Fund Recovered</div>
-<div class="card">6. Balance Fee Paid</div>
 </div>
 </section>
 
-<!-- FEE -->
 <section class="section">
 <h3>Our Fee Model</h3>
 <div class="fee-box">
@@ -247,10 +222,16 @@ footer{
 <p>Our Fee: 10%</p>
 <p>Advance: 5%</p>
 <p style="color:#00ff99;font-weight:600">No Recovery – No Full Fee</p>
+
+<button class="pay-btn" onclick="showQR()">Payment</button>
+
+<div id="qrBox">
+  <p>Scan & Pay</p>
+  <img src="WhatsApp Image 2026-02-02 at 14.22.18.jpeg" alt="Payment QR">
+</div>
 </div>
 </section>
 
-<!-- CONTACT -->
 <section class="section" id="contact">
 <h3>Submit Your Case</h3>
 <div class="form-box">
@@ -259,22 +240,21 @@ footer{
 <input type="email" placeholder="Email">
 <input type="text" placeholder="City">
 <input type="text" placeholder="Loss Amount">
-<select>
-<option>Type of Fraud</option>
-<option>Fake Advisory</option>
-<option>Telegram Scam</option>
-<option>Account Manipulation</option>
-</select>
 <textarea rows="4" placeholder="Your Message"></textarea>
 <button>Submit Case</button>
 </div>
 </section>
 
 <footer>
-<p>📞+91 96696 57448| 📧 support@securetraderecovery.com</p>
-<p>Learning center d. H. Road bhela kolkata west Bengal</p>
-<p>©️ SecureTrade Recovery</p>
+<p>📞 +91 96696 57448 | 📧 support@securetraderecovery.com</p>
+<p>© SecureTrade Recovery</p>
 </footer>
+
+<script>
+function showQR(){
+  document.getElementById("qrBox").style.display = "block";
+}
+</script>
 
 </body>
 </html>
